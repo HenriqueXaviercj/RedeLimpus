@@ -4,7 +4,7 @@ header {
   border-bottom: 1px solid white;
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   top: 0;
@@ -14,6 +14,7 @@ header > * {
 }
 header #btnMenu {
   border-right: 0.1em solid gray;
+  cursor: pointer;
 }
 header #btnMenu span {
   background-color: darkgray;
@@ -25,12 +26,10 @@ header #btnMenu span {
 }
 header nav {
   display: none;
-  position: absolute;
-  right: 0;
-  left: 0;
+  position: fixed;
+  left: -100vw;
   top: 50px;
   padding: 0;
-  transition: right 0.2s;
 }
 header nav a {
   color: black;
@@ -45,10 +44,21 @@ header nav a:hover {
   background-color: aquamarine;
   transition: 0.2s;
 }
-header nav.active {
-  display: flex;
-  flex-flow: column nowrap;
-}
 header h2 {
   margin: 0 18px;
+  font-family: var(--font);
+  font-size: auto;
+  cursor: pointer;
+}
+header h2 a {
+  text-decoration: none;
+  color: white;
+}
+
+nav.active {
+  display: flex;
+  flex-flow: column nowrap;
+  left: 0;
+  right: 0;
+  transition: 5s;
 }/*# sourceMappingURL=header.css.map */

@@ -6,7 +6,7 @@ header {
     display: flex;
     justify-content: space-between;
 
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
@@ -17,6 +17,7 @@ header {
 
     #btnMenu {
         border-right: 0.1em solid gray;
+        cursor: pointer;
 
         span {
             background-color: darkgray;
@@ -31,13 +32,10 @@ header {
 
     nav {
         display: none;
-        position: absolute;
-        right: 0;
-        left: 0;
+        position: fixed;
+        left: -100vw;
         top: 50px;
         padding: 0;
-        
-        transition: right .2s;
 
         a {
             color: black;
@@ -53,12 +51,23 @@ header {
                 transition: .2s;
             }
     }
-            nav.active {
-            display: flex;
-            flex-flow: column nowrap;
-        }
 
     h2 {
         margin: 0 18px;
+        font-family: var(--font);
+        font-size: auto;
+        cursor: pointer;
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
+}
+
+nav.active {
+    display: flex;
+    flex-flow: column nowrap;
+    left: 0;
+    right: 0;
+    transition: 5s;
 }
