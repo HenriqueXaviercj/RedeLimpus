@@ -1,0 +1,64 @@
+header {
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid white;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    > * {
+        padding: 10px 8px;
+    }
+
+    #btnMenu {
+        border-right: 0.1em solid gray;
+
+        span {
+            background-color: darkgray;
+            width: 25px;
+            padding: 1px;
+            margin: 6px;
+            border-radius: 5px;
+
+            display: flex;
+        }
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 50px;
+        padding: 0;
+        
+        transition: right .2s;
+
+        a {
+            color: black;
+            text-decoration: none;
+            background-color: aqua;
+            border-bottom: 1px solid gray;
+            padding: 20px;
+            font-size: 2em;
+        }
+            a:hover {
+                font-size: 2.2em;
+                background-color: aquamarine;
+                transition: .2s;
+            }
+    }
+            nav.active {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+    h2 {
+        margin: 0 18px;
+    }
+}
