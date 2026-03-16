@@ -1,12 +1,46 @@
+@use "style";
+
 #intro{
-    margin-top: 50px;
     display: flex;
-    height: calc(100vh - 50px);
+    justify-content: space-between;
+    height: 550px;
+    flex-flow: column;
+    
+    //background-image: none;
 
-    background-image: none;
+    #text-intro {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    p{
-        font-size: 3em;
-        color: black;
+        p {
+            font-size: 3em;
+            font-family: style.$font;
+            color: black;
+            width: 80%;
+        }
     }
+
+    img {
+        position: relative;
+        flex-grow: 1;
+        background-color: green;
+        z-index: 1;
+    }
+
+    #bg-intro {
+        background-color: greenyellow;
+        height: 500px;
+        
+        z-index: 0;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+
+        display: flex;
+    }    
 }
+
