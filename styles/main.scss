@@ -1,0 +1,39 @@
+@use "style";
+
+#main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    
+    #bg-main {
+        background-color: style.$green;
+        position: absolute;
+        z-index: 0;
+        top: 580px;
+        left: 0;
+        right: 0;
+
+        height: 800px;
+    }
+
+    label {
+        width: 100%;
+    }
+
+    #seachPoint {
+        position: relative;
+        z-index: 1;
+
+        border: none;
+        border-radius: 5px;
+        outline: none;
+
+        margin: 5px;
+        padding: 5px;
+        width: 80%;
+
+        font-family: style.$font;
+        
+    }
+}

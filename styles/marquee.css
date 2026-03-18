@@ -20,4 +20,6 @@ body, html {
      object-fit: cover;
   text-wrap: nowrap;
   text-align: center;
+  width: 100vw;
+  display: none;
 }/*# sourceMappingURL=marquee.css.map */
