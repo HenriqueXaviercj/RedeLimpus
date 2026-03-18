@@ -25,7 +25,7 @@ header > * {
   padding: 10px 8px;
 }
 header #btnMenu {
-  border-right: 0.1em solid #D5F2E5;
+  border-right: 1px solid #D5F2E5;
   cursor: pointer;
 }
 header #btnMenu span {
@@ -36,12 +36,25 @@ header #btnMenu span {
   border-radius: 5px;
   display: flex;
 }
+@media (min-width: 768px) {
+  header #btnMenu {
+    display: none;
+  }
+}
 header nav {
   display: none;
   position: fixed;
-  left: -100vw;
+  left: 0;
+  right: 0;
   top: 50px;
   padding: 0;
+}
+@media (min-width: 768px) {
+  header nav {
+    display: flex;
+    position: initial;
+    align-items: center;
+  }
 }
 header nav a {
   color: black;
@@ -51,16 +64,47 @@ header nav a {
   padding: 20px;
   font-size: 2em;
 }
+@media (min-width: 768px) {
+  header nav a {
+    color: #F2F2F0;
+    background-color: black;
+    border-bottom: none;
+    border-right: 1px solid #F2F2F0;
+    padding: 10px 15px;
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 1440px) {
+  header nav a {
+    font-size: 1.6em;
+    padding: 12px 18px;
+  }
+}
 header nav a:hover {
-  font-size: 2.2em;
+  font-size: 2em;
   background-color: #B9D9B8;
   transition: 0.2s;
+}
+@media (min-width: 768px) {
+  header nav a:hover {
+    font-size: 1.3em;
+    background-color: black;
+    text-decoration: underline;
+    transition: none;
+  }
+}
+@media (min-width: 1440px) {
+  header nav a:hover {
+    font-size: 1.6em;
+  }
 }
 header h2 {
   margin: 0 18px;
   font-family: var(--font);
-  font-size: auto;
+  font-size: 1.8em;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 header h2 a {
   text-decoration: none;
