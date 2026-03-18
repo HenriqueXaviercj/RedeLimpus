@@ -1,0 +1,15 @@
+@use "style";
+
+#marquee {
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    background-color: style.$beige;
+
+    p {
+        object-fit: cover;
+        text-wrap: nowrap;
+        text-align: center;
+    }
+}
