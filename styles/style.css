@@ -7,4 +7,9 @@
 body, html {
   height: 100vh;
   width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
 }/*# sourceMappingURL=style.css.map */

@@ -9,6 +9,11 @@ body, html {
   width: 100vw;
 }
 
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 header {
   background-color: black;
   color: white;

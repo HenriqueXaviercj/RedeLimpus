@@ -19,3 +19,8 @@ body, html {
     width: 100vw;
 }
 
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+

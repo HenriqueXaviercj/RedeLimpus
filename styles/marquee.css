@@ -9,6 +9,11 @@ body, html {
   width: 100vw;
 }
 
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 #marquee {
   height: 30px;
   display: flex;
