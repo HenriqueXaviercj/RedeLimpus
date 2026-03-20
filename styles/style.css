@@ -12,4 +12,10 @@ body, html {
 body {
   display: flex;
   flex-flow: column nowrap;
+}
+
+#page {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100Vw;
 }/*# sourceMappingURL=style.css.map */
