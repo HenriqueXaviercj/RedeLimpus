@@ -8,6 +8,7 @@ header {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     position: fixed;
     left: 0;
@@ -15,14 +16,12 @@ header {
     top: 0;
 
     z-index: 2;
-
-    > * {
-        padding: 10px 8px;
-    }
+    height: 60px;
 
     #btnMenu {
         border-right: 1px solid style.$lightgreen;
         cursor: pointer;
+        padding: 10px 8px;
 
         span {
             background-color: style.$white;
@@ -49,8 +48,9 @@ header {
 
         @include responsive.respond-to(tablet) {
             display: flex;
-            position: initial;
+            position: relative;
             align-items: center;
+            top: 0;
         }
 
         a {
@@ -94,13 +94,19 @@ header {
     }
 
     h2 {
-        margin: 0 18px;
+        margin-right: 20px;
         font-family: var(--font);
         font-size: 1.8em;
         cursor: pointer;
         display: flex;
         align-items: center;
+        justify-content: center;
 
+        position: relative;
+        right: 0;
+
+        padding: 20px;
+        
         a {
             text-decoration: none;
             color: style.$white;

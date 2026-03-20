@@ -17,14 +17,20 @@ body {
 #intro {
   display: flex;
   justify-content: space-between;
-  min-height: 500px;
+  height: 500px;
   flex-flow: column;
   margin-top: 50px;
   position: relative;
+  flex-shrink: 0;
 }
 @media (min-width: 768px) {
   #intro {
     height: 600px;
+  }
+}
+@media (min-width: 1024px) {
+  #intro {
+    height: calc(100vh - 60px);
   }
 }
 #intro #text-intro {
@@ -51,16 +57,20 @@ body {
 @media (min-width: 768px) {
   #intro #text-intro p {
     font-size: 3em;
-    color: white;
+    color: #F2F2F0;
     width: 60%;
     max-width: 400px;
     margin-left: 10%;
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.01));
   }
 }
+@media (min-width: 1440px) {
+  #intro #text-intro p {
+    font-size: 3.5em;
+  }
+}
 #intro img {
   position: relative;
-  background-color: green;
   z-index: 1;
   height: 80%;
   -o-object-fit: cover;
