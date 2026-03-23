@@ -1,17 +1,28 @@
 @use "style";
 
 #marquee {
-    height: 30px;
+  overflow: hidden;
+  background-color: style.$beige;
+
+  #track {
     display: flex;
-    align-items: center;
+    width: max-content;
+    animation: marquee 20s linear infinite;
+    padding: 10px 0;
 
-    background-color: style.$beige;
-
-    p {
-        object-fit: cover;
-        text-wrap: nowrap;
-        text-align: center;
-        width: 100vw;
-        display: none;
+    span {
+      white-space: nowrap;
+      padding-right: 50px;
+      margin: 0;
     }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

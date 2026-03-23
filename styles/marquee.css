@@ -14,17 +14,34 @@ body {
   flex-flow: column nowrap;
 }
 
-#marquee {
-  height: 30px;
+#page {
   display: flex;
-  align-items: center;
+  flex-flow: column nowrap;
+  width: 100Vw;
+}
+
+#marquee {
+  overflow: hidden;
   background-color: #D9B991;
 }
-#marquee p {
-  -o-object-fit: cover;
-     object-fit: cover;
-  text-wrap: nowrap;
-  text-align: center;
-  width: 100vw;
-  display: none;
+#marquee #track {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  padding: 10px 0;
+}
+#marquee #track span {
+  white-space: nowrap;
+  padding-right: 50px;
+  margin: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=marquee.css.map */

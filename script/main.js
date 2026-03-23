@@ -23,3 +23,9 @@ document.addEventListener('click', (event) => {
 nav.addEventListener('click', () => {
     nav.classList.remove("active");
 });
+
+const track = document.querySelector('#track');
+//Ajusta a quantidade certa de texto para manter o marquee com a sensação de loop infinito
+while (track.scrollWidth < window.innerWidth * 2) {
+  track.innerHTML += track.innerHTML;
+}
