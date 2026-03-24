@@ -10,10 +10,12 @@ $beige: #D9B991;
 $black: #000000;
 $gray: #333333;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body, html {
