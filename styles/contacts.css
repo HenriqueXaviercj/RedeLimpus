@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#page {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100Vw;
+}
+
+#contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contacts #contacts-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
+  height: 464px;
+  margin: 50px 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #F2F2F0;
+}
+#contacts #contacts-content h2 {
+  font-family: "Franklin Gothic Medium", sans-serif;
+  color: #688C6A;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 40px 0;
+}
+
+#contacts-form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+#contacts-form input, #contacts-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #688C6A;
+  border-radius: 4px;
+  font-family: "Franklin Gothic Medium", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+}
+#contacts-form input:hover, #contacts-form textarea:hover {
+  border-color: #B9D9B8;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+#contacts-form input:focus, #contacts-form textarea:focus {
+  outline: 1px solid #688C6A;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+#contacts-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+#contacts-form button {
+  padding: 0.5rem;
+  background-color: #688C6A;
+  color: #F2F2F0;
+  border: none;
+  border-radius: 4px;
+  font-family: "Franklin Gothic Medium", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+#contacts-form button:hover {
+  background-color: #B9D9B8;
+  color: #000000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+#contacts-form button:focus {
+  outline: 1px solid #000000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bg-contacts {
+  position: absolute;
+  top: 1530px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 600px;
+  background-color: #D5F2E5;
+  z-index: -1;
+}/*# sourceMappingURL=contacts.css.map */

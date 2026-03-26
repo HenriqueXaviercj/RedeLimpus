@@ -9,17 +9,13 @@
     #bg-main {
         background-color: style.$green;
         position: relative;
-        z-index: 0;
+        z-index: -1;
         top: 0;
         left: 0;
         right: 0;
 
-        width: 100vw;
+        width: 100%;
         height: 800px;
-    }
-
-    label {
-        width: 90%;
     }
 
     #searchPoint {
