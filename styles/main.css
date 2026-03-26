@@ -1,7 +1,9 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body, html {
@@ -38,7 +40,7 @@ body {
 #main label {
   width: 90%;
 }
-#main #seachPoint {
+#main #searchPoint {
   position: relative;
   z-index: 1;
   border: none;
