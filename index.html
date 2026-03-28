@@ -4,20 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rede Limpus</title>
-    <!--Default-->
-    <link rel="stylesheet" href="styles/style.css">
-    <!--Header-->
-    <link rel="stylesheet" href="styles/header.css">
-    <!--Introduction-->
-    <link rel="stylesheet" href="styles/intro.css">
-    <!--Marquee-->
-    <link rel="stylesheet" href="styles/marquee.css">
-    <!--Main-->
-    <link rel="stylesheet" href="styles/main.css">
-    <!--Contacts-->
-    <link rel="stylesheet" href="styles/contacts.css">
-    <!--Footer-->
-    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="/dist/css/style.css">
 </head>
 <body>
     <div id="page">
@@ -33,10 +20,12 @@
             </nav>
             <h2><a href="#intro">Rede Limpus</a></h2>
         </header>
-        <section id="intro">
-            <div id="bg-intro"></div>
-            <div id="text-intro"><p>Ajude a deixar o Mundo mais limpo</p></div>
-            <img src="imgs/planetInTheNatureMoreSmall.jpg" alt="">
+        <section class="intro">
+            <div class="intro__bg"></div>
+            <div class="intro__text">
+                <h1 class="intro__title">Ajude a deixar o Mundo mais limpo</h1>
+            </div>
+            <img src="imgs/planetInTheNatureMoreSmall.jpg" alt="Placa escrita 'Save The Planet'" class="intro__img">
         </section>
 
         <section id="marquee">
@@ -97,6 +86,6 @@
             <div id="bg-footer"></div>
         </footer>
     </div>
-    <script src="script/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
