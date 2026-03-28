@@ -1,8 +1,8 @@
-@use "style";
+@use "../abstracts/variables" as v;
 
 #marquee {
   overflow: hidden;
-  background-color: style.$beige;
+  background-color: v.$beige;
 
   #track {
     display: flex;

@@ -1,4 +1,5 @@
-@use "style";
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 #main {
     display: flex;
@@ -7,7 +8,7 @@
     
     
     #bg-main {
-        background-color: style.$green;
+        background-color: v.$green;
         position: relative;
         z-index: -1;
         top: 0;
@@ -30,7 +31,7 @@
         padding: 5px;
         width: 80%;
 
-        font-family: style.$font;
+        font-family: v.$font;
         
     }
 }

@@ -1,10 +1,10 @@
-@use "style";
-@use "responsive";
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 header {
-    background-color: black;
-    color: white;
-    border-bottom: 1px solid white;
+    background-color: v.$black;
+    color: v.$white;
+    border-bottom: 1px solid v.$white;
 
     display: flex;
     justify-content: space-between;
@@ -19,12 +19,12 @@ header {
     height: 60px;
 
     #btnMenu {
-        border-right: 1px solid style.$lightgreen;
+        border-right: 1px solid v.$lightgreen;
         cursor: pointer;
         padding: 10px 8px;
 
         span {
-            background-color: style.$white;
+            background-color: v.$white;
             width: 25px;
             padding: 1px;
             margin: 6px;
@@ -33,7 +33,7 @@ header {
             display: flex;
         }
 
-        @include responsive.respond-to(tablet) {
+        @include m.respond-to(tablet) {
             display: none;
         }
     }
@@ -46,7 +46,7 @@ header {
         top: 50px;
         padding: 0;
 
-        @include responsive.respond-to(tablet) {
+        @include m.respond-to(tablet) {
             display: flex;
             position: relative;
             align-items: center;
@@ -56,38 +56,38 @@ header {
         a {
             color: black;
             text-decoration: none;
-            background-color: style.$white;
+            background-color: v.$white;
             border-bottom: 1px solid gray;
             padding: 20px;
             font-size: 2em;
 
-            @include responsive.respond-to(tablet) {
-                color: style.$white;
+            @include m.respond-to(tablet) {
+                color: v.$white;
                 background-color: black;
                 border-bottom: none;
-                border-right: 1px solid style.$white;
+                border-right: 1px solid v.$white;
                 padding: 10px 15px;
                 font-size: 1.3em;
             }
 
-            @include responsive.respond-to(large) {
+            @include m.respond-to(large) {
                 font-size: 1.6em;
                 padding: 12px 18px;
             }
         }
             a:hover {
                 font-size: 2em;
-                background-color: style.$green;
+                background-color: v.$green;
                 transition: .2s;
 
-                @include responsive.respond-to(tablet) {
+                @include m.respond-to(tablet) {
                     font-size: 1.3em;
                     background-color: black;
                     text-decoration: underline;
                     transition: none;
                 }
                 
-                @include responsive.respond-to(large) {
+                @include m.respond-to(large) {
                     font-size: 1.6em;
                 }
             }
@@ -109,7 +109,7 @@ header {
         
         a {
             text-decoration: none;
-            color: style.$white;
+            color: v.$white;
         }
     }
 }

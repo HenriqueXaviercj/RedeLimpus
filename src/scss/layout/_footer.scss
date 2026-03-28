@@ -1,8 +1,8 @@
-@use "style";
-@use "responsive";
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 footer {
-    color: style.$white;
+    color: v.$white;
     display: grid;
     grid-template-areas: 
     'inspiration'
@@ -11,7 +11,7 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
 
-    @include responsive.respond-to(tablet) {
+    @include m.respond-to(tablet) {
         grid-template-columns: 1fr 1.5fr;
         grid-template-rows: repeat(2, 1fr);
     }
@@ -31,16 +31,16 @@ footer {
         z-index: 1;
         grid-area: 'inspiration';
 
-        border-bottom: 1px solid style.$white;
+        border-bottom: 1px solid v.$white;
 
         display: flex;
         flex-flow: column;
         align-items: center;
         
-        @include responsive.respond-to(tablet) {
+        @include m.respond-to(tablet) {
             grid-row: 1 / span 2;
             border-bottom: none;
-            border-right: 1px solid style.$white;
+            border-right: 1px solid v.$white;
         }
 
         h4 {
@@ -60,7 +60,7 @@ footer {
         z-index: 1;
         grid-area: 'contacts';
 
-        border-bottom: 1px solid style.$white;
+        border-bottom: 1px solid v.$white;
 
         svg {
             width: 50px;
@@ -68,7 +68,7 @@ footer {
             cursor: pointer;
         }
             svg:hover {
-                color: style.$green;
+                color: v.$green;
                 transition: .3s ease;
             }
     }
@@ -80,14 +80,14 @@ footer {
     }
 
     #bg-footer {
-        background-color: style.$gray;
+        background-color: v.$gray;
         position: absolute;
         width: 100%;
         height: 381px;
         z-index: -1;
         display: block;
 
-        @include responsive.respond-to(tablet) {
+        @include m.respond-to(tablet) {
             height: 142px;
         }
     }

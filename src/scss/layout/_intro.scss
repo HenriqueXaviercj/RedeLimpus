@@ -1,5 +1,5 @@
-@use "style";
-@use "responsive";
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 #intro{
     display: flex;
@@ -10,11 +10,11 @@
     position: relative;
     flex-shrink: 0;
     
-    @include responsive.respond-to(tablet) {
+    @include m.respond-to(tablet) {
         height: 600px;
     }
 
-    @include responsive.respond-to(desktop) {
+    @include m.respond-to(desktop) {
         height: calc(100vh - 60px);
     }
 
@@ -25,29 +25,29 @@
         justify-content: center;
         align-items: center;
 
-        @include responsive.respond-to(tablet) {
-            background-color: rgba($color: #000, $alpha: 0.4);
+        @include m.respond-to(tablet) {
+            background-color: rgba(v.$black, $alpha: 0.4);
             justify-content: left;
         }
 
         p {
             font-size: 2.5em;
-            font-family: style.$font;
+            font-family: v.$font;
             color: black;
             width: 90%;
             max-width: 330px;
             padding: 40px 20px;
 
-            @include responsive.respond-to(tablet) {
+            @include m.respond-to(tablet) {
                 font-size: 3em;
-                color: style.$white;
+                color: v.$white;
                 width: 60%;
                 max-width: 400px;
                 margin-left: 10%;
                 background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.01));
             }
 
-            @include responsive.respond-to(large) {
+            @include m.respond-to(large) {
                 font-size: 3.5em;
             }
         }
@@ -55,19 +55,19 @@
 
     img {
         position: relative;
-        //background-color: style.$green;
+        //background-color: v.$green;
         z-index: 1;
         
         height: 80%;
         object-fit: cover;
 
-        @include responsive.respond-to(tablet) {
+        @include m.respond-to(tablet) {
             display: none;
         }
-    }
+    } 
 
     #bg-intro {
-        background-color: style.$lightgreen;
+        background-color: v.$lightgreen;
         height: 100%;
         
         z-index: -1;
@@ -78,8 +78,8 @@
 
         display: flex;
 
-        @include responsive.respond-to(tablet) {
-            background: style.$lightgreen url(../imgs/planetInTheNatureSmall.jpg) center no-repeat;
+        @include m.respond-to(tablet) {
+            background: v.$lightgreen url(/dist/assets/planetInTheNatureSmall.jpg) center no-repeat;
             background-size: cover;
         }
     }    
