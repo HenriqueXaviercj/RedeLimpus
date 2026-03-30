@@ -1,11 +1,11 @@
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .justify-between {
@@ -17,5 +17,5 @@
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
