@@ -1,21 +1,21 @@
 @use "../abstracts/variables" as v;
 
-#marquee {
+.marquee {
   overflow: hidden;
   background-color: v.$beige;
+}
 
-  #track {
-    display: flex;
-    width: max-content;
-    animation: marquee 20s linear infinite;
-    padding: 10px 0;
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  padding: 10px 0;
+}
 
-    span {
-      white-space: nowrap;
-      padding-right: 50px;
-      margin: 0;
-    }
-  }
+.marquee__scrollingTxt {
+  white-space: nowrap;
+  padding-right: 50px;
+  margin: 0;
 }
 
 @keyframes marquee {
