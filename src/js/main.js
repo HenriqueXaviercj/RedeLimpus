@@ -2,8 +2,8 @@
 //---- Header Scripts ----
 //------------------------
 
-const menuBtn = document.querySelector("#btnMenu");
-const nav = document.querySelector("#nav")
+const menuBtn = document.querySelector(".header__btnMenu");
+const nav = document.querySelector(".nav")
 
 //Liga e desliga o menu de navegação
 menuBtn.addEventListener('click', () => {
@@ -13,10 +13,8 @@ menuBtn.addEventListener('click', () => {
 //quando se aperta fora do menu de navegação ele fecha.
 document.addEventListener('click', (event) => {
     if(!nav.contains(event.target) && !menuBtn.contains(event.target)){
-        console.log('alou')
         nav.classList.remove("active");
     }
-    console.log('ola');
 });
 
 //Quando clica para selecionar uma opção vai fechar o menu

@@ -729,70 +729,74 @@ footer #bg-footer {
 
 /*================== LAYOUT ===================*/
 .nav {
-  display: none;
-  position: fixed;
+  position: absolute;
+  top: 100%;
   left: 0;
   right: 0;
-  top: 50px;
-  padding: 0;
+  flex-direction: column;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
 }
 @media (min-width: 768px) {
   .nav {
-    display: flex;
     position: relative;
     align-items: center;
+    flex-direction: row;
     top: 0;
+    left: auto;
+    right: auto;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
   }
 }
 
 /*================== LINKS =====================*/
 .nav__link {
-  color: black;
+  color: #000000;
   text-decoration: none;
   background-color: #F2F2F0;
-  border-bottom: 1px solid gray;
-  padding: 20px;
-  font-size: 2em;
+  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
+  font-size: 1.8em;
 }
 @media (min-width: 768px) {
   .nav__link {
     color: #F2F2F0;
-    background-color: black;
+    background-color: #000000;
     border-bottom: none;
     border-right: 1px solid #F2F2F0;
-    padding: 10px 15px;
-    font-size: 1.3em;
+    font-size: 1.4em;
   }
 }
 @media (min-width: 1440px) {
   .nav__link {
     font-size: 1.6em;
-    padding: 12px 18px;
   }
 }
 .nav__link:hover {
-  font-size: 2em;
   background-color: #B9D9B8;
   transition: 0.2s;
+  scale: 1 1.1;
 }
 @media (min-width: 768px) {
   .nav__link:hover {
-    font-size: 1.3em;
-    background-color: black;
+    background-color: #000000;
     text-decoration: underline;
+    scale: 1;
     transition: none;
-  }
-}
-@media (min-width: 1440px) {
-  .nav__link:hover {
-    font-size: 1.6em;
   }
 }
 
 .nav.active {
-  display: flex;
-  flex-flow: column nowrap;
-  left: 0;
-  right: 0;
-  transition: 5s;
+  transition: 0.4s;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */

@@ -3,67 +3,71 @@
 
 /*================== LAYOUT ===================*/
 .nav {
-    display: none;
-    position: fixed;
+    position: absolute;
+    top: 100%;
     left: 0;
     right: 0;
-    top: 50px;
-    padding: 0;
+    flex-direction: column;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
 
     @include m.respond-to(tablet) {
-        display: flex;
         position: relative;
         align-items: center;
+        flex-direction: row;
         top: 0;
+        left: auto;
+        right: auto;
+        height: 100%;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
     }
 }
 
 /*================== LINKS =====================*/
 .nav__link {
-    color: black;
+    color: v.$black;
     text-decoration: none;
     background-color: v.$white;
-    border-bottom: 1px solid gray;
-    padding: 20px;
-    font-size: 2em;
+    border-bottom: 1px solid v.$gray;
+    border-top: 1px solid v.$gray;
+    font-size: 1.8em;
 
     @include m.respond-to(tablet) {
         color: v.$white;
-        background-color: black;
+        background-color: v.$black;
         border-bottom: none;
         border-right: 1px solid v.$white;
-        padding: 10px 15px;
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 
     @include m.respond-to(large) {
         font-size: 1.6em;
-        padding: 12px 18px;
     }
 
     &:hover {
-        font-size: 2em;
         background-color: v.$green;
         transition: .2s;
+        scale: 1 1.1;
 
         @include m.respond-to(tablet) {
-            font-size: 1.3em;
-            background-color: black;
+            background-color: v.$black;
             text-decoration: underline;
+            scale: 1;
             transition: none;
-        }
-        
-        @include m.respond-to(large) {
-            font-size: 1.6em;
         }
     }
 }
         
-
 .nav.active {
-    display: flex;
-    flex-flow: column nowrap;
-    left: 0;
-    right: 0;
-    transition: 5s;
+    transition: .4s;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
