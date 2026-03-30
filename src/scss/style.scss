@@ -1,6 +1,11 @@
+@use "base/reset";
 @use "base/globals";
 @use "base/typography";
 @use "base/normalize";
+
+@use "utils/flex";
+@use "utils/spacing";
+@use "utils/grid";
 
 @use "layout/intro";
 @use "layout/contact";
@@ -8,3 +13,4 @@
 @use "layout/main";
 @use "layout/header";
 @use "layout/marquee";
+@use "layout/nav";
