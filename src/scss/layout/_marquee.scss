@@ -1,10 +1,21 @@
 @use "../abstracts/variables" as v;
 
+/*================== LAYOUT ===================*/
 .marquee {
   overflow: hidden;
   background-color: v.$beige;
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*================== TEXT ======================*/
 .marquee__track {
   display: flex;
   width: max-content;
@@ -16,13 +27,4 @@
   white-space: nowrap;
   padding-right: 50px;
   margin: 0;
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }

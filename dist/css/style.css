@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
   font-family: "Franklin Gothic Medium", sans-serif;
@@ -319,20 +325,81 @@ template {
   display: none;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
 /*================== LAYOUT ===================*/
 .intro {
   height: clamp(500px, 70vh, 600px);
+  align-items: center;
 }
 @media (min-width: 1024px) {
   .intro {
-    height: calc(100vh - 40px);
+    height: calc(100vh - 61px);
   }
 }
 
 /*================== TEXT ======================*/
 .intro__text {
   position: relative;
-  flex-grow: 1;
+  z-index: 1;
+  height: clamp(250px, 80vw, 100%);
+  width: 100%;
 }
 @media (min-width: 768px) {
   .intro__text {
@@ -370,7 +437,7 @@ template {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: auto;
+  height: 110vw;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -391,7 +458,7 @@ template {
 }
 @media (min-width: 768px) {
   .intro__bg {
-    background: #D5F2E5 url(/dist/assets/planetInTheNatureSmall.jpg) center no-repeat;
+    background: #D5F2E5 url(../assets/planetInTheNatureSmall.jpg) center no-repeat;
     background-size: cover;
   }
 }
@@ -590,136 +657,51 @@ footer #bg-footer {
   font-family: "Franklin Gothic Medium", sans-serif;
 }
 
-header {
+/*================== LAYOUT ===================*/
+.header {
   background-color: #000000;
   color: #F2F2F0;
   border-bottom: 1px solid #F2F2F0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
+  inset: 0 0 auto 0;
   z-index: 2;
   height: 60px;
 }
-header #btnMenu {
+
+/*================== MENU ===================*/
+.header__btnMenu {
   border-right: 1px solid #D5F2E5;
   cursor: pointer;
-  padding: 10px 8px;
+  gap: 10px;
+  height: 100%;
 }
-header #btnMenu span {
+.header__btnMenu span {
   background-color: #F2F2F0;
-  width: 25px;
+  width: 2rem;
   padding: 1px;
-  margin: 6px;
   border-radius: 5px;
-  display: flex;
 }
 @media (min-width: 768px) {
-  header #btnMenu {
+  .header__btnMenu {
     display: none;
   }
 }
-header nav {
-  display: none;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 50px;
-  padding: 0;
-}
-@media (min-width: 768px) {
-  header nav {
-    display: flex;
-    position: relative;
-    align-items: center;
-    top: 0;
-  }
-}
-header nav a {
-  color: black;
-  text-decoration: none;
-  background-color: #F2F2F0;
-  border-bottom: 1px solid gray;
-  padding: 20px;
-  font-size: 2em;
-}
-@media (min-width: 768px) {
-  header nav a {
-    color: #F2F2F0;
-    background-color: black;
-    border-bottom: none;
-    border-right: 1px solid #F2F2F0;
-    padding: 10px 15px;
-    font-size: 1.3em;
-  }
-}
-@media (min-width: 1440px) {
-  header nav a {
-    font-size: 1.6em;
-    padding: 12px 18px;
-  }
-}
-header nav a:hover {
-  font-size: 2em;
-  background-color: #B9D9B8;
-  transition: 0.2s;
-}
-@media (min-width: 768px) {
-  header nav a:hover {
-    font-size: 1.3em;
-    background-color: black;
-    text-decoration: underline;
-    transition: none;
-  }
-}
-@media (min-width: 1440px) {
-  header nav a:hover {
-    font-size: 1.6em;
-  }
-}
-header h2 {
-  margin-right: 20px;
+
+/*================== TEXT ======================*/
+.header__title {
   font-family: var(--font);
-  font-size: 1.8em;
+  font-size: 1.6em;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  right: 0;
-  padding: 20px;
 }
-header h2 a {
+.header__title a {
   text-decoration: none;
   color: #F2F2F0;
 }
 
-nav.active {
-  display: flex;
-  flex-flow: column nowrap;
-  left: 0;
-  right: 0;
-  transition: 5s;
-}
-
-#marquee {
+/*================== LAYOUT ===================*/
+.marquee {
   overflow: hidden;
   background-color: #D9B991;
-}
-#marquee #track {
-  display: flex;
-  width: -moz-max-content;
-  width: max-content;
-  animation: marquee 20s linear infinite;
-  padding: 10px 0;
-}
-#marquee #track span {
-  white-space: nowrap;
-  padding-right: 50px;
-  margin: 0;
 }
 
 @keyframes marquee {
@@ -729,4 +711,88 @@ nav.active {
   to {
     transform: translateX(-50%);
   }
+}
+/*================== TEXT ======================*/
+.marquee__track {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  padding: 10px 0;
+}
+
+.marquee__scrollingTxt {
+  white-space: nowrap;
+  padding-right: 50px;
+  margin: 0;
+}
+
+/*================== LAYOUT ===================*/
+.nav {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 0;
+  }
+}
+
+/*================== LINKS =====================*/
+.nav__link {
+  color: black;
+  text-decoration: none;
+  background-color: #F2F2F0;
+  border-bottom: 1px solid gray;
+  padding: 20px;
+  font-size: 2em;
+}
+@media (min-width: 768px) {
+  .nav__link {
+    color: #F2F2F0;
+    background-color: black;
+    border-bottom: none;
+    border-right: 1px solid #F2F2F0;
+    padding: 10px 15px;
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 1440px) {
+  .nav__link {
+    font-size: 1.6em;
+    padding: 12px 18px;
+  }
+}
+.nav__link:hover {
+  font-size: 2em;
+  background-color: #B9D9B8;
+  transition: 0.2s;
+}
+@media (min-width: 768px) {
+  .nav__link:hover {
+    font-size: 1.3em;
+    background-color: black;
+    text-decoration: underline;
+    transition: none;
+  }
+}
+@media (min-width: 1440px) {
+  .nav__link:hover {
+    font-size: 1.6em;
+  }
+}
+
+.nav.active {
+  display: flex;
+  flex-flow: column nowrap;
+  left: 0;
+  right: 0;
+  transition: 5s;
 }/*# sourceMappingURL=style.css.map */
