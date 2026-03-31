@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../abstracts/variables" as v;
 @use "../abstracts/mixins" as m;
 
@@ -23,7 +24,7 @@
     width: 100%;
 
     @include m.respond-to(tablet) {
-        background-color: rgba(v.$black, $alpha: 0.4);
+        background-color: color.change(v.$black, $alpha: 0.4);
         justify-content: flex-start;
     }
 }
@@ -42,7 +43,10 @@
         width: 60%;
         max-width: 400px;
         margin-left: 10%;
-        background-image: linear-gradient(to left, rgba(v.$white, 0.2), rgba(v.$white, 0.01));
+        background-image: linear-gradient(
+            to left, 
+            color.change(v.$white, $alpha: 0.2), 
+            color.change(v.$white, $alpha: 0.01));
     }
 
     @include m.respond-to(large) {
@@ -79,7 +83,7 @@
     display: flex;
 
     @include m.respond-to(tablet) {
-        background: v.$lightgreen url(../assets/planetInTheNatureSmall.jpg) center no-repeat;
+        background: v.$lightgreen url(/assets/planetInTheNatureSmall.jpg) center no-repeat;
         background-size: cover;
     }
 }   
