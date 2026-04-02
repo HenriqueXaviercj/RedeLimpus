@@ -8,12 +8,12 @@
 <body>
     <div class="page">
         <header class="header flex align-center justify-between">
-            <div class="header__btnMenu p-1 flex flex-column align-center">
+            <div class="header__btnMenu p-1 flex flex-column align-center" aria-haspopup="true" aria-controls="nav" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <nav class="nav flex"> <!--active-->
+            <nav class="nav flex" id="nav" aria-label="Navegação principal" aria-hidden="true" role="navigation">
                 <a href="#main" class="nav__link p-1">Buscar</a>
                 <a href="#contatos" class="nav__link p-1">Contatos</a>
             </nav>
@@ -55,34 +55,34 @@
                 </form>
             </div>
         </section>
-        <footer>
-            <div id="inpiration">
+        <footer class="footer g-1 p-1">
+            <div class="footer__text">
                 <h4>Rede Limpus</h4>
                 <p>Esse site foi inspirado em um projeto chamado Rede Vivus</p>
             </div>
-            <div id="contacts">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-social">
+            <div class="footer__contacts flex-center g-2">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-social">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-social">
+                </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-social">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                     <rect x="2" y="9" width="4" height="12"></rect>
                     <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-social">
+                </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-social">
                     <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
                     <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-social tiktok">
+                </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-social tiktok">
                     <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-                </svg>
+                </svg></a>
             </div>
-            <div id="copyright">
+            <div class="footer__copyright flex-center">
                 <p>Copyright © 2026 Henrique. Todos os direitos reservados.</p>
             </div>
-            <div id="bg-footer"></div>
+            <div class="footer__bg" id="bg-footer"></div>
         </footer>
     </div>
     <script type="module" src="/src/main.js"></script>
